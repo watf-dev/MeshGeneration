@@ -4,8 +4,14 @@ A personal project to show my academic output and skillset.
 ## Cloning the Repository
 To clone the repository,
 ```
-git clone --recurse-submodules https://github.com/watf-dev/MeshGeneration.git
+git clone https://github.com/watf-dev/MeshGeneration.git
 ```
+
+## Setting required modules
+- [watfmesh](https://github.com/watf-dev/watfmesh)
+
+- [watf.nurbs](https://github.com/watf-dev/watf/tree/main/nurbs)
+
 To add the directory to the PATH, for example,
 ```
 echo 'export PATH=$PATH:/path/to/directory' >> ~/.zshrc
