@@ -14,12 +14,12 @@ source ~/.zshrc
 
 ## Run
 ```
-./run_2d.sh 5 20
+./run_2d.sh 40 10
 ```
 - arg 1: the number of elements in x
 - arg 2: the number of elements in y
 
 ## Visualization with ParaView
-Example mesh with 5 elements in x and 20 elements in y;
+Example mesh with 40 elements in x and 10 elements in y;
 ![Example Mesh](figs/pic1.png)
 
