@@ -27,5 +27,6 @@ source ~/.zshrc
 
 ## Visualization with ParaView
 Example mesh with 40 elements in x and 10 elements in y;
-![Example Mesh](figs/pic1.png)
+![Example 2D Mesh](figs/pic_2d.png)
+![Example 3D Mesh](figs/pic_3d.png)
 
