@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python3
 # Created: Oct, 25, 2024 19:04:41 by Wataru Fukuda
 
 import os
