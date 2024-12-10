@@ -8,7 +8,6 @@ from watfmesh.MeshGeneration import MeshGeneration
 # DEBUG = True
 DEBUG = False
 
-
 def main():
   import argparse
   parser = argparse.ArgumentParser(description="""
@@ -17,18 +16,17 @@ def main():
   parser.add_argument("-o","--outdir", default="MESH_FEM", help="output")
   parser.add_argument("-e","--nes", type=int, action="append")
   parser.add_argument("-s","--space", nargs=2, type=float, action="append")
-  parser.add_argument("-n","--nsd", type=int)
-  parser.add_argument("-p","--order", type=int, action="append")
+  parser.add_argument("-p","--order", type=int)
   (options, args) = parser.parse_known_args()
   space = options.space
   nes = options.nes
-  nsd = options.nsd
   orders = options.order
 
-  mesh = MeshGeneration(space, nes, orders, nsd)
+  mesh = MeshGeneration(space, nes, orders)
   nn = mesh.genNN()
   ne = mesh.genNE()
   nen = mesh.genNEN()
+  nsd = mesh.genNSD()
   npd = mesh.genNPD()
   mxyz = mesh.genMXYZ()
   mien = mesh.genMIEN()
