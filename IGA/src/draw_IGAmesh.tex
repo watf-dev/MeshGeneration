@@ -1,0 +1,78 @@
+% Created: Mar, 03, 2025 16:24:52 by Wataru Fukuda
+\documentclass[multi=minipage,border=0]{standalone}
+\usepackage{pgfplots}
+\usepackage{filecontents}
+
+\pgfplotsset{compat=newest}
+\pgfplotsset{every axis/.append style={
+  axis lines=middle,
+  xtick=\empty,
+  ytick=\empty,
+  axis equal image,
+  axis line style={draw=none}
+  },
+  %=== legend setting ===%
+  legend columns=3,
+  legend style={
+    at={(0.5,-0.2)},
+    anchor=north,
+    font=\normalsize,
+    legend columns=-1,
+    legend cell align=left,
+    /tikz/every even column/.append style={column sep=0.5cm},
+    draw=none,
+  },
+  %=== cycle list ===%
+  cycle list name=color list,
+  cycle list={
+    {mark=none, color=red},
+    {mark=none, color=blue},
+    {mark=none, color=orange},
+    {mark=none, color=green},
+    {mark=none, color=pink},
+    {mark=none, color=yellow},
+    {mark=none, color=purple},
+  },
+}
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[enlargelimits=true]
+    \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_0_1.txt};
+    \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_0_2.txt};
+    \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_0_3.txt};
+    \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_0_4.txt};
+    \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_1_1.txt};
+    \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_1_2.txt};
+    % \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_1_3.txt};
+    \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_1_4.txt};
+    % \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_2_1.txt};
+    \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_2_2.txt};
+    \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_2_3.txt};
+    \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_2_4.txt};
+    % \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_3_1.txt};
+    \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_3_2.txt};
+    % \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_3_3.txt};
+    \addplot+[smooth, tension=1.0, thick,color=black] table[x index=0, y index=1] {EDGE_DATA/edge_3_4.txt};
+
+    \addplot[only marks, mark=*, mark size=1pt, color=red] table {plot.txt};
+
+    \addplot[dashed, color=gray] coordinates {(1,-1) (2,-0.1)};
+    \addplot[dashed, color=gray] coordinates {(2,-0.1) (2.0,2.1)};
+    \addplot[dashed, color=gray] coordinates {(2.0,2.1) (1,3)};
+
+    \addplot[dashed, color=gray] coordinates {(0.8,-0.8) (1.6,0)};
+    \addplot[dashed, color=gray] coordinates {(1.6,0) (1.6,2)};
+    \addplot[dashed, color=gray] coordinates {(1.6,2) (0.8,2.8)};
+
+    \addplot[dashed, color=gray] coordinates {(0.2,-0.2) (0.4,0.3)};
+    \addplot[dashed, color=gray] coordinates {(0.4,0.3) (0.4,1.7)};
+    \addplot[dashed, color=gray] coordinates {(0.4,1.7) (0.2,2.2)};
+
+    \addplot[dashed, color=gray] coordinates {(0,0.4) (2.0,-0.1)};
+
+    \addplot[dashed, color=gray] coordinates {(0,1.6) (2.0,2.1)};
+  \end{axis}
+\end{tikzpicture}
+\end{document}
+
