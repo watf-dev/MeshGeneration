@@ -32,7 +32,7 @@ def main():
   mien = mesh.genMIEN()
   mrng = mesh.genMRNG()
 
-  data = watfio.ConfigData("FEM")
+  data = watfio.ConfigData("FEM2")
   data.setEndian("big")
   data.set("nn", nn)
   data.set("ne", ne)
